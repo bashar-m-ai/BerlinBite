@@ -1,9 +1,15 @@
 {
   "Version": "2012-10-17",
-  "Statement": [{
-    "Sid": "ReadNetworkingMetadataForBerlinBitePlan",
-    "Effect": "Allow",
-    "Action": ["ec2:DescribeAvailabilityZones", "ec2:DescribeManagedPrefixLists"],
-    "Resource": "*"
-  }]
+  "Statement": [
+    {
+      "Sid": "ReadNetworkingMetadataForBerlinBitePlan",
+      "Effect": "Allow",
+      "Action": [
+        "ec2:DescribeAvailabilityZones",
+        "ec2:DescribeManagedPrefixLists",
+        "ec2:GetManagedPrefixListEntries"
+      ],
+      "Resource": "*"
+    }
+  ]
 }

@@ -4,9 +4,9 @@ Search a real Berlin restaurant, confirm the place, and plan your evening with â
 
 ## Status â€” 24 September 2026
 
-Source implementation is present and the local server was successfully started by the user at http://127.0.0.1:8000. All 12 API, adapter and scoring tests passed in the installed Python 3.13 environment. No live API credentials have been supplied. Docker execution, Terraform provider validation and AWS deployment remain unverified because this authoring session restricts the required access. The GitHub connector rejected writes despite account-level push permission.
+The local app runs at http://127.0.0.1:8000 and the source is published to https://github.com/bashar-m-ai/BerlinBite. All 12 API, adapter and scoring tests pass. Docker builds and the local container serves the UI and health endpoint as a non-root user without embedded keys. Terraform initializes and validates successfully.
 
-Verified: all 12 automated tests, Python compilation, JavaScript syntax and Terraform formatting/parser checks. See `docs/VALIDATION.md`. Portfolio documents remain drafts until live-data, visual and deployment evidence is added.
+Live Google/OpenAI calls remain untested because keys have not been supplied. AWS planning is blocked by missing `ec2:DescribeAvailabilityZones` and `ec2:DescribeManagedPrefixLists` permissions; no resources have been created. Visual browser review remains pending. Portfolio documents are development drafts until live-data, visual and deployment evidence is added. See `docs/VALIDATION.md`.
 
 ## Run locally
 
@@ -86,6 +86,8 @@ python3 -m venv .venv
 terraform -chdir=terraform init
 terraform -chdir=terraform validate
 ```
+
+The optional `scripts/build_portfolio.py` regenerates the draft PDFs using ReportLab and macOS Arial fonts. Install `requirements-docs.txt` to use it; adapt font paths on other systems.
 
 Direct dependencies are pinned to the locally tested versions. requirements-lock.txt records the complete tested Python environment. Docker uses Python 3.13 to match local testing; Linux container verification remains pending.
 

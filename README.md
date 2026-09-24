@@ -1,6 +1,6 @@
 # BerlinBite ✳
 
-Search a real Berlin restaurant, confirm the place, and plan your evening with “Tonight at a Glance.” A small FastAPI application and a responsive vanilla-JavaScript frontend travel together in one Docker image.
+Search a real Berlin restaurant, confirm the place, and plan your evening with “Tonight at a Glance.” A small FastAPI application and a responsive vanilla-JavaScript frontend travel together in one Docker image. Uses Google Places API and ChatGPT API.
 
 ## Status — 24 September 2026
 

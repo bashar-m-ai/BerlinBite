@@ -312,7 +312,7 @@ resource "aws_cloudfront_distribution" "app" {
     viewer_protocol_policy   = "redirect-to-https"
     allowed_methods          = ["GET", "HEAD", "OPTIONS", "PUT", "POST", "PATCH", "DELETE"]
     cached_methods           = ["GET", "HEAD"]
-    cache_policy_id          = "413f160d-6c3c-4f5f-9b11-7fbedb588a46"
+    cache_policy_id          = "4135ea2d-6df8-44a3-9df3-4b5a84be39ad"
     origin_request_policy_id = "216adef6-5c7f-47e4-b989-5492eafa07d3"
     compress                 = true
   }

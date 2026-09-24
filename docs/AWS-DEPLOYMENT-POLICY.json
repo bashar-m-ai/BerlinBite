@@ -6,7 +6,8 @@
       "Effect": "Allow",
       "Action": [
         "ec2:Describe*",
-        "ec2:GetManagedPrefixListEntries"
+        "ec2:GetManagedPrefixListEntries",
+        "ec2:GetSecurityGroupsForVpc"
       ],
       "Resource": "*",
       "Condition": {

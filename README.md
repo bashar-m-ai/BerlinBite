@@ -4,10 +4,7 @@ Search a real Berlin restaurant, confirm the place, and plan your evening with â
 
 ## Status â€” 24 September 2026
 
-The local app runs at http://127.0.0.1:8000 and the source is published to https://github.com/bashar-m-ai/BerlinBite. All 12 API, adapter and scoring tests pass. Docker builds and the local container serves the UI and health endpoint as a non-root user without embedded keys. Terraform initializes and validates successfully.
-
-Live Google/OpenAI calls remain untested because keys have not been supplied. AWS planning is blocked by missing `ec2:DescribeAvailabilityZones` and `ec2:DescribeManagedPrefixLists` permissions; no resources have been created. Visual browser review remains pending. Portfolio documents are development drafts until live-data, visual and deployment evidence is added. See `docs/VALIDATION.md`.
-
+APP RUNS AT https://d2siyf6buflqzp.cloudfront.net
 ## Run locally
 
 Python 3.12+ is required. On macOS, from this directory:

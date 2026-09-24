@@ -20,5 +20,5 @@ with zipfile.ZipFile(output,'w',zipfile.ZIP_DEFLATED) as z:
         source_dest='04-Final-Phase/BerlinBite/'+rel
         z.write(p,prefix+source_dest)
         if dest!=source_dest: z.write(p,prefix+dest)
-    z.writestr(prefix+'README-FIRST.txt','DEVELOPMENT DRAFT. Live API testing, visual review and AWS deployment are pending. Read VALIDATION.md before submission. The source folder needs a private .env configured using scripts/configure_keys.py. No keys are included. The complete source directory includes its documentation.\n')
+    z.writestr(prefix+'README-FIRST.txt','STUDENT REVIEW REQUIRED. AWS deployment completed. Public homepage, live search, details and AI insights passed. Live app: https://d2siyf6buflqzp.cloudfront.net . Read VALIDATION.md before submission. The source folder needs a private .env configured using scripts/configure_keys.py. No keys are included. The complete source directory includes its documentation.\n')
 print(output)

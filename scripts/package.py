@@ -17,6 +17,8 @@ with zipfile.ZipFile(output,'w',zipfile.ZIP_DEFLATED) as z:
         elif rel.startswith('docs/Phase-3'): dest='04-Final-Phase/'+p.name
         elif rel.startswith('docs/'): dest='01-Research-and-Development/'+p.name
         else: dest='04-Final-Phase/BerlinBite/'+rel
-        z.write(p,prefix+dest)
-    z.writestr(prefix+'README-FIRST.txt','DEVELOPMENT DRAFT. Live API testing, visual review and AWS deployment are pending. Read VALIDATION.md before submission. The source folder needs a private .env configured using scripts/configure_keys.py. No keys are included. Keep documentation beside the source when using scripts/build_portfolio.py.\n')
+        source_dest='04-Final-Phase/BerlinBite/'+rel
+        z.write(p,prefix+source_dest)
+        if dest!=source_dest: z.write(p,prefix+dest)
+    z.writestr(prefix+'README-FIRST.txt','DEVELOPMENT DRAFT. Live API testing, visual review and AWS deployment are pending. Read VALIDATION.md before submission. The source folder needs a private .env configured using scripts/configure_keys.py. No keys are included. The complete source directory includes its documentation.\n')
 print(output)
